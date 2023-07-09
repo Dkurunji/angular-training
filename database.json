@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 6,
+      "task_name": "s"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Dhananjay Kurunji",
+      "email": "djay@gmail.com",
+      "password": "alliswell",
+      "id": 1
+    },
+    {
+      "fullname": "aj",
+      "email": "aj",
+      "password": "aj",
+      "id": 2
+    },
+    {
+      "fullname": "Ajith",
+      "email": "ajith@yahoo.com",
+      "password": "ajith1234",
+      "id": 3
+    }
+  ],
+  "loginUsers": []
+}

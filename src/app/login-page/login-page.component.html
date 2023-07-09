@@ -1,0 +1,30 @@
+<div>
+    <div class="card mt-4 border border-secondary shadow" style="background-image: linear-gradient(to bottom right,  rgb(63, 138, 236), black,rgb(235, 87, 87), black);">
+        <h1 class="text-center text-white">Login</h1>
+    </div>
+    <form class="mt-3" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="form-group mb-3">
+            <label for="useremail" class="text-white">Email</label>
+            <input formControlName="email" type="email" class="form-control" id="useremail" name="useremail" placeholder="User Email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="userpassword" class="text-white">Password</label>
+            <input formControlName="password" type="password" class="form-control" id="userpassword" name="userpassword" placeholder="User Password">
+            <small><a class="text-white" href="#" style="text-decoration: none;">Forgot Password?</a></small>
+        </div>
+        <div class="mb-4">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+        </div>
+        <!-- <div class="or">
+            <span>or</span>
+        </div>
+    
+        <div class="mt-5 text-white">
+            login with <mat-icon color="red">g_mobiledata_badge</mat-icon>
+        </div> -->
+
+        <div class="mt-1 text-white text-center">
+            <a routerLink="/signup" style="text-decoration: none; color: white;" title="signup here">New user ? Click to Sign Up!</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+.or{
+    border-bottom: 3px solid white;
+    position: relative;
+}
+
+.or span{
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(121, 35, 35);
+    
+}
+
+.mat-icons{
+    color: red !important;
+    background-color: white;
+}
