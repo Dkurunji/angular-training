@@ -1,6 +1,6 @@
 <div>
-    <div class="card mt-4 border border-secondary shadow" style="background-image: linear-gradient(to bottom right,  rgb(63, 138, 236), black,rgb(235, 87, 87), black);">
-        <h1 class="text-center text-white">Login</h1>
+    <div class="card mt-4 border border-secondary shadow" style="background-image: linear-gradient(to bottom right, #43cea2 , #185a9d);">
+        <h1 class="text-center text-white" style="text-shadow: 4px 4px 5px black;">Login</h1>
     </div>
     <form class="mt-3" [formGroup]="loginForm" (ngSubmit)="onLogin()">
         <div class="form-group mb-3">
@@ -13,7 +13,7 @@
             <small><a class="text-white" href="#" style="text-decoration: none;">Forgot Password?</a></small>
         </div>
         <div class="mb-4">
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            <button type="submit" class="btn btn-info fw-bolder fs-5" style="width: 100%;">Login</button>
         </div>
         <!-- <div class="or">
             <span>or</span>
@@ -24,7 +24,8 @@
         </div> -->
 
         <div class="mt-1 text-white text-center">
-            <a routerLink="/signup" style="text-decoration: none; color: white;" title="signup here">New user ? Click to Sign Up!</a>
+            <a routerLink="/signup" style="text-decoration: none; color: white; font-size: 16px;font-weight: bolder;
+                " title="signup here">New user ? Click to Sign Up!</a>
         </div>
     </form>
 </div>

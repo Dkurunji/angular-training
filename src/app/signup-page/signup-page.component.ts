@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,11 +17,23 @@ export class SignupPageComponent {
 
   }
 
+  getFullName(){
+    return this.signupForm.get('fullname');
+  }
+  
+  getEmail(){
+    return this.signupForm.get('email');
+  }
+
+  getPassword(){
+    return this.signupForm.get('password');
+  }
+
   ngOnInit(){
     this.signupForm = this.buildForm.group({
-      fullname :[''],
-      email:[''],
-      password:['']
+      fullname :['', Validators.required],
+      email:['', [Validators.required]],
+      password:['', [Validators.required, Validators.minLength(3)]]
     })
   }
 

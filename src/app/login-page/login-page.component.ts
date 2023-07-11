@@ -24,7 +24,7 @@ export class LoginPageComponent {
 
   onLogin(){
     this.htttp.get<any>(this._URL).subscribe( data =>{
-      console.log('checking!')
+      // console.log('checking!')
       const user = data.find( (el : any) =>{
         console.log(el);
         console.log(this.loginForm.value);

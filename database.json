@@ -1,17 +1,19 @@
 {
   "tasks": [
     {
-      "id": 6,
-      "task_name": "s"
+      "id": 1,
+      "task_name": "complete mandatory training"
+    },
+    {
+      "id": 2,
+      "task_name": "complete voice survey"
+    },
+    {
+      "id": 3,
+      "task_name": "set goals for this annual"
     }
   ],
   "signupUsers": [
-    {
-      "fullname": "Dhananjay Kurunji",
-      "email": "djay@gmail.com",
-      "password": "alliswell",
-      "id": 1
-    },
     {
       "fullname": "aj",
       "email": "aj",

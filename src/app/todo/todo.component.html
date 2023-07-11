@@ -1,34 +1,34 @@
-<div class="container-fluid bg-light">
-    <div class="container bg-light">
-        <div class="row mt-4" style="height: 500px;">
-            <div class="col bg-success login-form">
+<div class="container-fluid">
+    <div class="container">
+        <div class="row mt-4" style="height: 450px;">
+            <div class="col login-form">
               <!-- <app-login-page></app-login-page> -->
             </div>
 
-            <div class="col-md-6 bg-white shadow">
-                <div class="card bg-primary mt-4 mb-3">
-                    <h4 class="text-white text-center ps-3 pt-2 pb-2">Let's To Do!!</h4>
+            <div class="col-md-6 shadow pt-2" style="box-shadow: 4px 4px 5px white !important; border: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="card bg-light mt-4 mb-3" style="background-image: linear-gradient(to bottom right, #43cea2 , #185a9d);">
+                    <h4 class="text-white text-center ps-3 pt-2 pb-2" style="text-shadow: 3px 3px 3px black; font-size: 30px;">Let's To Do!!</h4>
                 </div>
                 <div class="shadow">
-                    <div class="input-group p-4 mb-3 bg-light">
+                    <div class="input-group p-4 mb-3 bg-light" style="background-image: linear-gradient(to bottom right, #43cea2 ,#185a9d);">
                         <input type="text" class="form-control" placeholder="Enter task" [(ngModel)]="todoEntered" (keydown.enter)="onAddTodo()">
-                        <button class="btn btn-outline-success" type="button" (click) = "onAddTodo()" >+</button>
+                        <button class="btn btn-outline-info" type="button" (click) = "onAddTodo()" >+</button>
                     </div>
                 </div>
-                <h4 class="text-primary mt-4">Tasks:</h4>                
+                <h4 class="text-white mt-4" style="font-weight: bolder;">Todos</h4>                
                
                 <ng-template #elseBlock>
-                    <div>nothing to display</div>
+                    <div style="text-align: center;font-weight: bolder; font-size: 20px;">Nothing To Display!!!</div>
                 </ng-template>                   
                     
                 
-                <div style="overflow-y: auto; height: 350px;" *ngIf="isTodosExist; else elseBlock">
+                <div style="overflow-y: auto; height: 300px;" *ngIf="isTodosExist; else elseBlock">
                     <div class="m-3">
-                        <div class="shadow p-2 border rounded">
+                        <div class="shadow p-2 border rounded" style="background-color:  rgb(85, 71, 71);">
                             <div class="input-group row ps-3 mb-1 mt-1" *ngFor="let todo of todos">
-                                <div class="card col-md-9 border-0 bg-success" id="updateDiv" style="vertical-align:middle;">{{todo.task_name}}</div>
-                                <button class="btn btn-outline-primary col me-2" (click) = "editButtonHandler(todo)" *ngIf="!hasToUpdate" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">E</button>
-                                <button class="btn btn-outline-danger col" (click) = "onDeleteTodo(todo)" >D</button>
+                                <div class="card col-md-9 border-0 bg-info" id="updateDiv" style="font-size: 18px; font-weight: bolder;">{{todo.task_name}}</div>
+                                <button class="btn btn-outline-light col me-2" (click) = "editButtonHandler(todo)" *ngIf="!hasToUpdate" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">E</button>
+                                <button class="btn btn-outline-light col" (click) = "onDeleteTodo(todo)" >D</button>
                                 <button class="btn btn-outline-success col" (click) = "onDeleteTodo(todo)" *ngIf="hasToUpdate">U</button>
                             </div>
                         </div>
@@ -57,8 +57,8 @@
 
                 </div>
             </div>
-            <div class="col bg-success">
-                <button class="btn btn-primary" routerLink="/login">Logout</button>
+            <div class="col text-end">
+                <button class="btn btn-info" routerLink="/login">Logout</button>
             </div>
         </div>
     </div>

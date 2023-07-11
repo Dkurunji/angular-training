@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SignupDashboardComponent } from './signup-dashboard/signup-dashboard.component';
+import {AngularFireModule} from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,16 @@ import { SignupDashboardComponent } from './signup-dashboard/signup-dashboard.co
     HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyDQtNtyVvtKScyBlkYvtfwHpJt3fmi3JAw",
+      authDomain: "fir-angular-project-aaf5a.firebaseapp.com",
+      projectId: "fir-angular-project-aaf5a",
+      storageBucket: "fir-angular-project-aaf5a.appspot.com",
+      messagingSenderId: "917528587650",
+      appId: "1:917528587650:web:edbc9f63ed6787fc9cf39b",
+      measurementId: "G-MDSJH0VH2E"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
