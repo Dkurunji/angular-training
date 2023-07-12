@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private fireAuth : AngularFireAuth, private router : Router) { }
 
   signup(email : string, password : string){
-    this.fireAuth.signInWithEmailAndPassword(email, password)
+    this.fireAuth.createUserWithEmailAndPassword(email, password)
     .then( data =>{
       alert('Signup Successful!!!')
       this.router.navigate(['/login']);
@@ -21,24 +21,12 @@ export class AuthService {
   }
   
   login(email : string, password : string){
-    this.fireAuth.createUserWithEmailAndPassword(email, password)
-    .then( data =>{      
-      localStorage.setItem('token', 'true');
-      alert('loggedIn Successful!!!')
-      this.router.navigate(['/home']);
-    }, err =>{
-      alert('something gone wrong while signup!!')
-      this.router.navigate(['/login']);
-    })
+    return this.fireAuth.signInWithEmailAndPassword(email, password)
+    
   }
   
   
   logout(){
-    this.fireAuth.signOut()
-    .then(data =>{
-      this.router.navigate(['/login']);
-      alert('successfully logged out!!!!')
-
-    })
+    return this.fireAuth.signOut();    
   }
 }

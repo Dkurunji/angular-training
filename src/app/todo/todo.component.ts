@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Task } from '../task';
 import { CrudService } from '../crud.service';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -22,7 +24,10 @@ export class TodoComponent {
   // updateDivBlock = document.querySelector('updateDiv');
 
 
-  constructor(private taskService : CrudService){
+  constructor(
+    private taskService : CrudService, 
+    private authService : AuthService,
+    private router: Router){
     
   }
 
@@ -78,6 +83,18 @@ export class TodoComponent {
       alert('something gone wrong while editing' + err.message);
     })
 
+  }
+
+
+  //logout method using firebase authentication
+
+  onLogOutAuth(){
+    this.authService.logout()
+    .then(() =>{
+      this.router.navigate(['/login']);
+      alert('successfully logged out!!!!')
+
+    })
   }
 
 

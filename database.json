@@ -25,6 +25,12 @@
       "email": "ajith@yahoo.com",
       "password": "ajith1234",
       "id": 3
+    },
+    {
+      "fullname": "aj",
+      "email": "aj@gmail.com",
+      "password": "aj2",
+      "id": 4
     }
   ],
   "loginUsers": []

@@ -1,8 +1,8 @@
 <div>
-    <div class="card mt-4 border border-secondary shadow" style="background-image: linear-gradient(to bottom right, #43cea2 , #185a9d);">
+    <div class="card mt-4 shadow" style="background: none;">
         <h1 class="text-center text-white" style="text-shadow: 4px 4px 5px black;">Sign Up</h1>
     </div>
-    <form class="mt-3" [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+    <form class="mt-3" [formGroup]="signupForm" (ngSubmit)="onSignUpAuth()">
         <div class="form-group mb-3">
             <label for="fname" class="text-white">Full Name</label>
             <input [class.is-invalid]="getFullName() ?.invalid && getFullName()?.touched" formControlName="fullname" type="text" class="form-control" id="fname" name="fname" placeholder="Full Name">
@@ -23,7 +23,7 @@
             <small><a class="text-white" href="#" style="text-decoration: none;">Forgot Password?</a></small>
         </div>
         <div class="mb-4">
-            <button type="submit" class="btn btn-info fw-bolder fs-5" style="width: 100%;">Sign Up</button>
+            <button type="submit" class="btn btn-outline-light fw-bolder fs-5" style="width: 100%;">Sign Up</button>
         </div>     
     </form>
 
