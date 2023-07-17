@@ -40,7 +40,7 @@ import {AngularFireModule} from '@angular/fire/compat';
       messagingSenderId: "917528587650",
       appId: "1:917528587650:web:edbc9f63ed6787fc9cf39b",
       measurementId: "G-MDSJH0VH2E"
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

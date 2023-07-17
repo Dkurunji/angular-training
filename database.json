@@ -13,25 +13,6 @@
       "task_name": "set goals for this annual"
     }
   ],
-  "signupUsers": [
-    {
-      "fullname": "aj",
-      "email": "aj",
-      "password": "aj",
-      "id": 2
-    },
-    {
-      "fullname": "Ajith",
-      "email": "ajith@yahoo.com",
-      "password": "ajith1234",
-      "id": 3
-    },
-    {
-      "fullname": "aj",
-      "email": "aj@gmail.com",
-      "password": "aj2",
-      "id": 4
-    }
-  ],
+  "signupUsers": [],
   "loginUsers": []
 }

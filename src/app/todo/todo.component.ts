@@ -21,9 +21,6 @@ export class TodoComponent {
   id : number = 1;
   isTodosExist : boolean = this.todos.length > 0 ? true : false;
 
-  // updateDivBlock = document.querySelector('updateDiv');
-
-
   constructor(
     private taskService : CrudService, 
     private authService : AuthService,
@@ -71,7 +68,8 @@ export class TodoComponent {
 
   editButtonHandler(todo : Task){
       this.todoObj = todo;
-      this.todoObj.task_name = todo.task_name;
+      // console.log(todo)
+      // this.todoObj.task_name = todo.task_name;
       this.editedTodoValue = todo.task_name;
   }
 

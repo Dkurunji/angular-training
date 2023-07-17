@@ -27,7 +27,7 @@ export class LoginPageComponent {
     })
   }
 
-
+  //these below 2 methods we used just for form validation
   getEmail(){
     return this.loginForm.get('email');
   }

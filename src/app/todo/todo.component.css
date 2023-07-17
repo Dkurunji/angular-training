@@ -4,3 +4,7 @@
    justify-content: space-around;
 }
 
+
+.input-button:focus-visible{
+    background-color: red;
+}
