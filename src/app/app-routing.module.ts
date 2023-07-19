@@ -3,13 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginDashboardComponent } from './login-dashboard/login-dashboard.component';
 import { TodoComponent } from './todo/todo.component';
 import { SignupDashboardComponent } from './signup-dashboard/signup-dashboard.component';
+import { authGuard } from './auth.guard';
 
 //routes
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:"full"},
   {path:'login', component:LoginDashboardComponent},
   {path:'signup', component:SignupDashboardComponent},
-  {path:'home', component:TodoComponent}
+  {path:'home', component:TodoComponent, canActivate:[authGuard]},
+  {path:'**', component:LoginDashboardComponent}
 ];
 
 @NgModule({

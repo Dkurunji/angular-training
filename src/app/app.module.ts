@@ -13,6 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SignupDashboardComponent } from './signup-dashboard/signup-dashboard.component';
 import {AngularFireModule} from '@angular/fire/compat';
+import { HomeComponent } from './home/home.component';
+import { TransationItemComponent } from './transation-item/transation-item.component';
+import { ApiNewsComponent } from './api-news/api-news.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import {AngularFireModule} from '@angular/fire/compat';
     LoginDashboardComponent,
     SignupPageComponent,
     SignupDashboardComponent,
+    HomeComponent,
+    TransationItemComponent,
+    ApiNewsComponent,
     
   ],
   imports: [

@@ -1,0 +1,12 @@
+.transaction-item-container{
+    /* background-color: #ababab66; */
+    /* background-color: #14c16938; */
+    /* background-color: #e30d3e12; */
+    background-color: rgba(160, 154, 154, 0.4);;
+    /* background-image: linear-gradient(to bottom,#000000, #07daff , black); */
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px ;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}

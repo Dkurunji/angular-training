@@ -1,0 +1,34 @@
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <div class="cards-wrapper">
+            <div  class="card" style="width: 20rem">
+                <img class="card-img-top" src={{news[0].urlToImage}} alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{news[0].title}}</h5>
+                  <p class="card-text pt-1">{{news[0].description}}</p>
+                </div> 
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000" *ngFor="let item of news">
+        <div class="cards-wrapper">
+            <div  class="card" style="width: 20rem">
+                <img class="card-img-top" src="{{item.urlToImage}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                  <p class="card-text pt-1">{{item.description}}</p>
+                </div> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>

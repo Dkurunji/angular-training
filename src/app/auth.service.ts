@@ -23,10 +23,22 @@ export class AuthService {
   login(email : string, password : string){
     return this.fireAuth.signInWithEmailAndPassword(email, password);
     
-  }
-  
+  }  
   
   logout(){
-    return this.fireAuth.signOut();    
+    localStorage.removeItem('token');
+    return this.fireAuth.signOut();  
+
+  }
+
+  isLoggedIn(){
+    if(!!localStorage.getItem('token')){
+      return true;
+    }
+    else{
+      alert('Plese login to access this page');
+      this.router.navigate(['/login']);
+      return false;
+    }
   }
 }
