@@ -16,6 +16,12 @@ import {AngularFireModule} from '@angular/fire/compat';
 import { HomeComponent } from './home/home.component';
 import { TransationItemComponent } from './transation-item/transation-item.component';
 import { ApiNewsComponent } from './api-news/api-news.component';
+import { CurrencyConvertorComponent } from './currency-convertor/currency-convertor.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { RecentActivitiesComponent } from './recent-activities/recent-activities.component';
+import { BankingServicesComponent } from './banking-services/banking-services.component';
+import { CurrencyConverterDashboardComponent } from './currency-converter-dashboard/currency-converter-dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import { ApiNewsComponent } from './api-news/api-news.component';
     HomeComponent,
     TransationItemComponent,
     ApiNewsComponent,
+    CurrencyConvertorComponent,
+    CreateAccountComponent,
+    RecentActivitiesComponent,
+    BankingServicesComponent,
+    CurrencyConverterDashboardComponent,
+    NavbarComponent,
     
   ],
   imports: [

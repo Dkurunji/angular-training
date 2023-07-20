@@ -1,0 +1,39 @@
+
+#search-container{
+    background-color: black;
+    border-radius: 10px;
+    
+}
+
+#searchbar{
+    min-width: 300px;
+    height: 100%;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+#searchbar-icon{
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#searchbar::placeholder{
+    color: white;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#searchbar:focus-visible{
+    outline: none;
+    background-color: rgb(130, 130, 133);
+    color: white;
+}
+
+
+.bold{
+    font-weight: bolder;
+}
+

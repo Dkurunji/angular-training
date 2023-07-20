@@ -1,0 +1,26 @@
+<form [formGroup]="accountCreationForm" (ngSubmit)="onCreateAccount()">
+    <div class="form-group pb-2">
+      <label>Full Name</label>
+      <input formControlName="full_name" type="text" class="form-control" placeholder="Dhananjay Kurunji">
+    </div>
+    <div class="form-group pb-2">
+      <label>Email address</label>
+      <input formControlName="email" type="email" class="form-control" name="email" placeholder="name@example.com">
+    </div>
+    <div class="form-group pb-2">
+        <label>Account Type</label>
+        <select formControlName="account_type" class="form-control" name="account_type">
+            <option value="savings" selected>Savings</option>
+            <option value="current">Current</option>
+        </select>
+    </div>
+    <div class="form-group pb-2">
+      <label>Account Number</label>
+      <input formControlName="account_number" type="email" class="form-control" name="account_number" value="466464646464">
+    </div>
+    <div class="modal-footer" style="border: none;">          
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" >Create</button>
+    </div>
+</form>
+

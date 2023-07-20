@@ -12,6 +12,7 @@ export class ApiNewsComponent {
 
   _URL :string = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=04d5c696341a4f158911e452116654a0';
     news : any = '';
+    trunatedRandom  = 0;
 
 
     ngOnInit(){
@@ -22,8 +23,9 @@ export class ApiNewsComponent {
     this.http.get<any>(this._URL)
     .subscribe(data =>{
       this.news = data.articles;
+
+      this.trunatedRandom = Math.trunc(this.news.length * Math.random()) + 1;
     
-      console.log(this.news[0].urlToImage);
     }, err =>{
       alert('somethin gone wrong');
     })
