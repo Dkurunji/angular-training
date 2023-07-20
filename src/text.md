@@ -8,3 +8,4 @@
 API's used 
 
 1. news api - https://newsapi.org/docs/endpoints/top-headlines
+2. Exchange Api - https://exchangeratesapi.io/documentation/

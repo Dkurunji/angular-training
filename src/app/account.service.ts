@@ -11,12 +11,19 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   createNewAccount(account : any){
-    this.http.post(this._URL, account)
-      .subscribe(data =>{
-        alert('Account Created Successfully');
-      }, err =>{
-        alert('Something gone wrong while creating account!!')
-      })
+    return this.http.post(this._URL, account);      
+  }
+
+  onUpdateAccount(account : any){
+    return this.http.put(this._URL + "/" + account.id, account)
+  }
+
+  onDeleteAccount(){
+    return null;
+  }
+
+  searchAccount(){
+     return this.http.get<any>(this._URL);
   }
 
 

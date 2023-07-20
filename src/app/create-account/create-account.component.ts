@@ -10,27 +10,37 @@ import { AccountService } from '../account.service';
 })
 export class CreateAccountComponent {
   accountCreationForm: any;
-  id:number = 1001;
+  ID: any;
 
   constructor(
     private formBuilder : FormBuilder,
     private accountCreateService: AccountService){
+    localStorage.setItem('ID', '1000');
+    this.ID  = Number(localStorage.getItem('ID'));
 
   }
 
   ngOnInit(){
+    
     this.accountCreationForm = this.formBuilder.group({
       full_name:[''],
       email:[''],
       account_type:['savings'],
-      account_number:[this.id]
+      account_number:[++this.ID],
+      balance:[0]
     })
+
   }
+ 
 
   onCreateAccount(){
-    console.log(this.accountCreationForm.value);
-
-    this.accountCreateService.createNewAccount(this.accountCreationForm.value);
+    this.accountCreateService.createNewAccount(this.accountCreationForm.value)
+    .subscribe(data =>{
+      alert('Account Created Successfully');
+      this.ngOnInit();      
+    }, err =>{
+      alert('Something gone wrong while creating account!!')
+    })
   }
 
 }

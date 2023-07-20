@@ -1,0 +1,41 @@
+<div *ngIf="matchedAccount; else elseBlock" >
+    <div style="display: flex;align-items: center; background-color: #fdfdfd;" (click) = "ngOnInit()">
+        <mat-icon style="margin-right: 10px;">account_circle</mat-icon>
+        <span>{{matchedAccount.full_name}}</span>
+    </div>
+    <div *ngIf="isClicked">
+        <table>
+            <thead>
+                Account Details
+            </thead>
+            <tr><input type="text" value="{{matchedAccount.full_name}}"></tr>
+            
+        </table>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+  <div>
+    Account Not Found!!
+  </div>
+</ng-template>  
+
+
+<!-- Search Account Modal -->
+<div class="modal fade mt-5" id="searchAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Woww!!</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <h1>Hi There!!</h1>
+        </div>
+        
+    </div>
+    </div>
+</div>
+

@@ -11,5 +11,14 @@
   ],
   "signupUsers": [],
   "loginUsers": [],
-  "accounts":[]
+  "accounts": [
+    {
+      "full_name": "Dhananjay Kurunji",
+      "email": "kurunjidhananjay7@gmail.com",
+      "account_type": "savings",
+      "account_number": 1001,
+      "balance": 0,
+      "id": 1
+    }
+  ]
 }

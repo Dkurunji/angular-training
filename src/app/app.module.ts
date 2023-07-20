@@ -22,6 +22,8 @@ import { RecentActivitiesComponent } from './recent-activities/recent-activities
 import { BankingServicesComponent } from './banking-services/banking-services.component';
 import { CurrencyConverterDashboardComponent } from './currency-converter-dashboard/currency-converter-dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UpdateAccountComponent } from './update-account/update-account.component';
+import { SearchAccountComponent } from './search-account/search-account.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BankingServicesComponent,
     CurrencyConverterDashboardComponent,
     NavbarComponent,
+    UpdateAccountComponent,
+    SearchAccountComponent,
     
   ],
   imports: [
