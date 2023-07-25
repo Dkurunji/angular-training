@@ -28,10 +28,9 @@
 
 #searchbar:focus-visible{
     outline: none;
-    background-color: rgb(130, 130, 133);
+    
     color: white;
 }
-
 
 .bold{
     font-weight: bolder;

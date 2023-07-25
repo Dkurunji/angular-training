@@ -1,41 +1,77 @@
 <div *ngIf="matchedAccount; else elseBlock" >
-    <div style="display: flex;align-items: center; background-color: #fdfdfd;" (click) = "ngOnInit()">
-        <mat-icon style="margin-right: 10px;">account_circle</mat-icon>
-        <span>{{matchedAccount.full_name}}</span>
+    <div style="display: flex;align-items: center;justify-content: space-between; background-color: #8adbbc24;border-radius: 10px;">
+        <div style="display: flex;align-items: center;">
+            <mat-icon style="margin-right: 10px;">account_circle</mat-icon>
+            <span >{{matchedAccount.full_name}}</span>
+        </div>
+        <div style="display: flex;align-items: center;margin-right: 10px;">
+            <mat-icon class="m-2" (click)="viewHandler()"  [class.d-none]="isViewClicked">visibility</mat-icon>
+            <mat-icon class="m-2" (click)="editHandler()"  [class.d-none]="isEditClicked">edit</mat-icon>
+        </div>
     </div>
-    <div *ngIf="isClicked">
-        <table>
-            <thead>
-                Account Details
-            </thead>
-            <tr><input type="text" value="{{matchedAccount.full_name}}"></tr>
-            
-        </table>
+
+    <!-- for viewing searched accounts -->
+    <div *ngIf="isViewClicked">
+      <div>
+        <label>Full Name</label>
+        <input class="m-2" type="text" value={{matchedAccount.full_name}} disabled>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="text" value={{matchedAccount.email}} disabled>
+      </div>
+      <div>
+        <label>Account Number</label>
+        <input type="text" value={{matchedAccount.account_number}} disabled>
+      </div>
+      <div>
+        <label>Account Type</label>
+        <input type="text" value={{matchedAccount.account_type}} disabled>
+      </div>
+      <div>
+        <label>Account Balance</label>
+        <input type="text" value={{matchedAccount.balance}} disabled>
+      </div>
+      
+        
+        <div class="modal-footer" style="border: none;">          
+            <button type="button" class="btn btn-secondary" (click)="resetButtonClicks()">Close</button>
+        </div>
+    </div>
+
+    <!-- for editing searched accounts -->
+    <div *ngIf="isEditClicked">
+        <form [formGroup]="updateForm" (ngSubmit)="updateAccount(updateForm.value)">
+            <div class="form-group pb-2">
+              <label>Full Name</label>
+              <input formControlName="full_name" type="text" class="form-control" placeholder="Dhananjay Kurunji">
+            </div>
+            <div class="form-group pb-2">
+              <label>Email address</label>
+              <input formControlName="email" type="email" class="form-control" name="email" placeholder="name@example.com">
+            </div>
+            <div class="form-group pb-2">
+                <label>Account Type</label>
+                <select formControlName="account_type" class="form-control" name="account_type" value="savings">
+                    <option value="savings" selected>Savings</option>
+                    <option value="current">Current</option>
+                </select>
+            </div>
+            <div class="form-group pb-2">
+              <label>Account Number</label>
+              <input formControlName="account_number" type="email" class="form-control" name="account_number" value="466464646464">
+            </div>
+            <div class="modal-footer" style="border: none;">          
+              <button type="button" class="btn btn-secondary" (click)="resetButtonClicks()">Close</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Update</button>
+            </div>
+        </form>        
     </div>
 </div>
 
 <ng-template #elseBlock>
   <div>
-    Account Not Found!!
+    Account is not found!!
   </div>
 </ng-template>  
-
-
-<!-- Search Account Modal -->
-<div class="modal fade mt-5" id="searchAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Woww!!</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-            <h1>Hi There!!</h1>
-        </div>
-        
-    </div>
-    </div>
-</div>
 

@@ -15,15 +15,23 @@ export class AccountService {
   }
 
   onUpdateAccount(account : any){
-    return this.http.put(this._URL + "/" + account.id, account)
+    return this.http.put<any>(this._URL + "/" + account.id, account)
   }
 
-  onDeleteAccount(){
-    return null;
+  onDeleteAccount(account : any){
+    return this.http.delete<any>(this._URL + "/" + account.id)
   }
 
   searchAccount(){
-     return this.http.get<any>(this._URL);
+     return this.http.get<any[]>(this._URL);
+  }
+
+  depositMoney(acc : any){
+    return this.http.put<any>(this._URL+"/"+acc.id, acc)
+  }
+
+  withdrawMoney(acc : any){
+    return this.http.put<any>(this._URL+"/"+acc.id, acc)
   }
 
 

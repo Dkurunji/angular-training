@@ -12,13 +12,13 @@
             <li class="nav-item mx-3" id="search-container" >
                 <!-- <input type="text" class="form-control"> -->
                 <input id="searchbar" placeholder="Search for Accounts" [(ngModel)]="searchedAccount">
-                <a id="searchbar-icon"><mat-icon style="color: white; background-color: black;" data-bs-toggle="modal" data-bs-target="#searchAccountModal" (click)="onSearchAccount(searchedAccount)">search</mat-icon></a>
+                <a [class.d-none]="!searchedAccount" id="searchbar-icon"><mat-icon style="color: white; background-color: black;" data-bs-toggle="modal" data-bs-target="#searchAccountModal" (click)="onSearchAccount(searchedAccount)">search</mat-icon></a>
             </li>
             <li class="nav-item mx-3">                        
                     <a class="nav-link bold" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" href="#">Create Account</a>                       
             </li>
             <li class="nav-item mx-3">
-                <a class="nav-link bold" href="#" data-bs-toggle="modal" data-bs-target="#updateAccountModal">Update Account</a>
+                <a class="nav-link bold" href="#" data-bs-toggle="modal" data-bs-target="#updateAccountModal">EMI Calculator</a>
             </li>
             <li class="nav-item mx-3">
                 <a class="nav-link bold" href="#">Transactions</a>
@@ -73,13 +73,13 @@
     </div>
 
         <!-- Search Account Modal -->
-        <div class="modal fade mt-5" id="searchAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade mt-5" id="searchAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" (keydown.escape)="resetSearch()">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Account Found</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                <button (click)="resetSearch()" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" >&times;</span>
                 </button>
                 </div>
                 <div class="modal-body">
@@ -90,4 +90,5 @@
             </div>
         </div>
 
-</nav>  
+</nav>    
+ 
