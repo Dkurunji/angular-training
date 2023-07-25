@@ -36,3 +36,8 @@
     font-weight: bolder;
 }
 
+.navbar-items-container{
+    display: flex;
+    
+}
+

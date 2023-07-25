@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AccountService } from '../account.service';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +14,7 @@ export class NavbarComponent {
   matchedAccount: any = '';
 
 
-  constructor(private accountService : AccountService){}
+  constructor(private accountService : AccountService, private authService : AuthService, private router : Router){}
 
   onSearchAccount(account : any){
     console.log(this.searchedAccount);
@@ -45,6 +47,17 @@ export class NavbarComponent {
     this.matchedAccount = '';
     this.searchedAccount = '';
   }
+
+    //logout method using firebase authentication
+
+    onLogOutAuth(){
+      this.authService.logout()
+      .then(() =>{
+        this.router.navigate(['/login']);
+        alert('successfully logged out!!!!')
+  
+      })
+    }
      
 
 }
