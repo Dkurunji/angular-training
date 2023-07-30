@@ -1,0 +1,38 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.card-input{
+    border: 1px solid #96bdb6;
+    /* margin: 1px 5px; */
+    background-color: rgba(160, 154, 154, 0.4);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 6px;
+    width: 80%;
+}
+
+.card-input::placeholder{
+    color: rgb(0, 0, 0,0.5);
+}
+
+.card-input:focus-visible{
+    outline: none;
+    background-color: white;
+}
+
+.card-input:focus-visible .card-input{
+    font-weight: bolder;
+}
+
+.card-input-button{
+    border: none;
+    background-color: rgb(205 205 189);
+    padding: 5px 20px;
+    border-radius: 6px;
+    
+}

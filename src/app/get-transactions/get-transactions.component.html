@@ -1,0 +1,8 @@
+<input type="text" class="form-control" placeholder="Enter Account Number" [(ngModel)]="acc_number">
+<button class="btn btn-success mt-2" (click)="getTransaction()">Get Transactions</button>
+
+<div>
+    <div class="m-2" *ngFor="let item of userTransactions">
+        <span style="background-color: bisque;">{{item}}</span>
+    </div>
+</div>

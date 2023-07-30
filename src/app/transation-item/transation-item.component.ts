@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-transation-item',
@@ -7,6 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 export class TransationItemComponent {
 
-  @Input() transactions : any;
+  transactionItems : any = [];
+
+  constructor(private loginService : LoginService){
+    this.loginService.getTransactions().subscribe(data =>{
+      this.transactionItems = data;
+    })
+  }
+  
+  ngOnInit(){
+    
+  }
 
 }

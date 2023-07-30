@@ -1,4 +1,27 @@
-<div class="transaction-item-container" *ngFor="let item of transactions">
-    <div>{{item.action}}</div>
-    <div>{{item.timestamp}}</div>
+<span style="color: white;font-weight: bolder;">Recent Activities:</span>
+
+<div style="overflow-y: auto; height: 85vh" >
+    <div class="m-3">
+    <div class="shadow">
+        <div class="transaction-item-container" *ngFor="let item of transactionItems">
+            <div>{{item.action}}</div>
+            <div>{{item.timestamp}}</div>
+        </div>               
+    </div>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

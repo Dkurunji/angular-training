@@ -10,88 +10,72 @@
     }
   ],
   "signupUsers": [],
+  "transactions": [
+    {
+      "action": "savings Account Created -  1002",
+      "timestamp": "27/7/2023 @ 12:22:57",
+      "id": 5
+    },
+    {
+      "action": "savings Account Created -  1001",
+      "timestamp": "27/7/2023 @ 12:23:59",
+      "id": 6
+    },
+    {
+      "action": "savings Account Created -  1002",
+      "timestamp": "27/7/2023 @ 12:24:19",
+      "id": 7
+    },
+    {
+      "action": "savings Account Created -  1001",
+      "timestamp": "28/7/2023 @ 10:16:5",
+      "id": 8
+    },
+    {
+      "action": "savings Account Created -  1001",
+      "timestamp": "28/7/2023 @ 10:28:54",
+      "id": 9
+    }
+  ],
   "loginUsers": [
     {
       "id": 1,
       "user": "Guest",
       "transactions": [
         {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
-        },
-        {
-          "action": "savings Account Created 1002",
-          "timestamp": "7/23/2023"
+          "action": "savings Account Created 1001",
+          "timestamp": "7/26/2023"
         },
         {
           "action": "savings Account Created 1001",
-          "timestamp": "7/23/2023"
+          "timestamp": "7/26/2023"
         },
         {
-          "action": "savings Account Created 1050",
-          "timestamp": "7/23/2023"
+          "action": "savings Account Created 1001",
+          "timestamp": "7/26/2023"
+        },
+        {
+          "action": "savings Account Created 1001",
+          "timestamp": "7/26/2023"
+        },
+        {
+          "action": "savings Account Created 1001",
+          "timestamp": "7/26/2023"
         }
       ]
     }
   ],
   "accounts": [
     {
-      "full_name": "Djay",
-      "email": "kurunjidhananjay7@gmail.com",
+      "full_name": "",
+      "email": "",
       "account_type": "savings",
       "account_number": 1001,
-      "balance": 2500,
+      "balance": 0,
       "transactions": [
-        "account created successfully",
-        "300 deposited",
-        "1000 deposited",
-        "500 deposited",
-        "500 withdraw",
-        "500 deposit"
+        "account created successfully"
       ],
       "id": 1
-    },
-    {
-      "full_name": "Sam",
-      "email": "sam@gmail.com",
-      "account_type": "savings",
-      "account_number": "1002",
-      "balance": 0,
-      "transactions": [
-        "account created successfully"
-      ],
-      "id": 2
-    },
-    {
-      "full_name": "Aj",
-      "email": "aj@gmail.com",
-      "account_type": "savings",
-      "account_number": "1003",
-      "balance": 0,
-      "transactions": [
-        "account created successfully"
-      ],
-      "id": 3
     }
   ]
 }

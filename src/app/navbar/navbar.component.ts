@@ -12,6 +12,8 @@ export class NavbarComponent {
 
   searchedAccount : any;
   matchedAccount: any = '';
+  searchTransactionAccount = '';
+  
 
 
   constructor(private accountService : AccountService, private authService : AuthService, private router : Router){}
@@ -50,14 +52,13 @@ export class NavbarComponent {
 
     //logout method using firebase authentication
 
-    onLogOutAuth(){
-      this.authService.logout()
-      .then(() =>{
-        this.router.navigate(['/login']);
-        alert('successfully logged out!!!!')
-  
-      })
-    }
+  onLogOutAuth(){
+    this.authService.logout()
+    .then(() =>{
+      this.router.navigate(['/login']);
+      alert('successfully logged out!!!!');  
+    })
+  }
      
 
 }

@@ -2,7 +2,7 @@
     <span class="mx-2 mb-3" style="color: white;font-weight: bolder;">Currency Convertor</span>
     <div class="card-container">
         <div style="display: flex; height: 50px; flex-wrap: wrap; margin-bottom: 5px;">
-            <input (change)="topChange()" type="text" value="1" style="background-color: rgba(214, 202, 202, 0.507); max-width: 80px;border: none;text-align: center;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" [(ngModel)]="fromAmount">
+            <input (change)="topChange()" type="text"  style="background-color: rgba(214, 202, 202, 0.507); max-width: 80px;border: none;text-align: center;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" [(ngModel)]="fromAmount">
             <div>
                 <div style="height: 100%;display: flex;" >
                     <span style="background-color: rgba(214, 202, 202, 0.507);border-left: 1px solid black;"></span>
@@ -15,12 +15,11 @@
             </div>
         </div>        
         <div style="display: flex; height: 50px; flex-wrap: wrap; margin-bottom: 5px;">
-            <input (change)="bottomChange()" [(ngModel)]="toAmount" type="text" value="1" style="background-color: rgba(214, 202, 202, 0.507); max-width: 80px;border: none;text-align: center;border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
+            <input (change)="bottomChange()" [(ngModel)]="toAmount" type="text" style="background-color: rgba(214, 202, 202, 0.507); max-width: 80px;border: none;text-align: center;border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
             <div>
                 <div style="height: 100%;display: flex;" >
                     <span style="background-color: rgba(214, 202, 202, 0.507);border-left: 1px solid black;"></span>
                     <select (change)="bottomChange()"  [(ngModel)]="toCountry" name="currency" id="currency" style="background-color: rgba(214, 202, 202, 0.507); width: 190px;padding: 5px 10px;border: none;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
-                        <!-- <option value="inr" selected>Indian rupee</option> -->
                         <option *ngFor="let item of countries | keyvalue" value="{{item.key}}" [selected]="item.key==='inr'">{{item.value}}</option>
                     </select>        
                 </div>

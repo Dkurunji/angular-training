@@ -24,6 +24,10 @@ import { CurrencyConverterDashboardComponent } from './currency-converter-dashbo
 import { NavbarComponent } from './navbar/navbar.component';
 import { UpdateAccountComponent } from './update-account/update-account.component';
 import { SearchAccountComponent } from './search-account/search-account.component';
+import { DepositDashboardComponent } from './deposit-dashboard/deposit-dashboard.component';
+import { WithdrawDashboardComponent } from './withdraw-dashboard/withdraw-dashboard.component';
+import { CloseDashboardComponent } from './close-dashboard/close-dashboard.component';
+import { GetTransactionsComponent } from './get-transactions/get-transactions.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { SearchAccountComponent } from './search-account/search-account.componen
     NavbarComponent,
     UpdateAccountComponent,
     SearchAccountComponent,
+    DepositDashboardComponent,
+    WithdrawDashboardComponent,
+    CloseDashboardComponent,
+    GetTransactionsComponent,
     
   ],
   imports: [

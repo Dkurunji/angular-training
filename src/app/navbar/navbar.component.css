@@ -27,8 +27,7 @@
 }
 
 #searchbar:focus-visible{
-    outline: none;
-    
+    outline: none;    
     color: white;
 }
 
@@ -36,8 +35,8 @@
     font-weight: bolder;
 }
 
-.navbar-items-container{
+.navbar{
     display: flex;
-    
+    justify-content: space-between;
 }
 

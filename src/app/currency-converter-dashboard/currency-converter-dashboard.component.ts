@@ -29,6 +29,8 @@ export class CurrencyConverterDashboardComponent {
       this.countries = data;
       console.log(this.countries);
     })
+
+    this.exchangeCurrency();
   }
 
   exchangeCurrency(){

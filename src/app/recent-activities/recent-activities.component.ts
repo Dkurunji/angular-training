@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -10,20 +10,6 @@ export class RecentActivitiesComponent {
 
   constructor(private loginService : LoginService){}
 
-  transactions = [];
 
-  ngOnInit(){
-    this.getTransactions();
-  }
-
-  getTransactions(){
-    this.loginService.getTransactions().subscribe(data =>{
-
-      for(let item of data){
-        this.transactions = item.transactions;
-      }
-    
-    })
-  }
 
 }

@@ -1,32 +1,3 @@
-<div class="card mt-2" style="height: 180px;background-image: linear-gradient(to bottom,#000000, #07daff , black);border: none;">
-    <span class="mx-2" style="color: white;font-weight: bolder;">Deposit</span>
-    <div class="card-container">
-        <input class="card-input mt-1" type="text" placeholder="Beneficiary Name" [(ngModel)]="cname_deposit">
-        <input class="card-input mt-1" type="text" placeholder="Account Number" [(ngModel)]="cnumber_deposit">
-        <input class="card-input mt-1" type="text" placeholder="Amount in Rupees" [(ngModel)]="camount_deposit">
-        <div>
-            <button class="card-input-button mt-2" (click)="depositToAccount()">Deposit</button>
-        </div>
-    </div>
-</div>
-<div class="card mt-2" style="height: 180px;background-image: linear-gradient(to bottom,#000000, #07daff , black);border: none;">
-    <span class="mx-2" style="color: white;font-weight: bolder;">Withdraw</span>
-    <div class="card-container">
-        <input class="card-input mt-1" type="text" placeholder="Beneficiary Name" [(ngModel)]="cname_withdraw">
-        <input class="card-input mt-1" type="text" placeholder="Account Number" [(ngModel)]="cnumber_withdraw">
-        <input class="card-input mt-1" type="text" placeholder="Amount in Rupees" [(ngModel)]="camount_withdraw">
-        <div>
-            <button class="card-input-button mt-2" (click)="withdrawMoneyFromAccount()">Withdraw</button>
-        </div>
-    </div>
-</div>
-<div class="card mt-1" style="height: 180px;background-image: linear-gradient(to bottom,#000000, #07daff , black);border: none;">
-    <span class="mx-2" style="color: white;font-weight: bolder;">Account Closure</span>
-    <div class="card-container">
-        <input class="card-input mt-1" type="text" placeholder="Beneficiary Name" [(ngModel)]="cname_close">
-        <input class="card-input mt-1" type="text" placeholder="Account Number" [(ngModel)]="cnumber_close">
-        <div>
-            <button class="card-input-button mt-2" (click)="deleteAccount()">Close</button>
-        </div>
-    </div>
-</div>
+<app-deposit-dashboard></app-deposit-dashboard>
+<app-withdraw-dashboard></app-withdraw-dashboard>
+<app-close-dashboard></app-close-dashboard>
